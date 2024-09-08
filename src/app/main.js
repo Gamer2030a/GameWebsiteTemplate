@@ -67,3 +67,21 @@ const animate = (e) => {
 };
 
 window.addEventListener('mousemove', animate);
+
+// send mail
+
+
+function sendEmail() {
+  var email = document.getElementById('email').value;
+  if (email) {
+      var subject = encodeURIComponent("New Subscription");
+      var body = encodeURIComponent("New subscription from: " + email);
+      var mailtoLink = `mailto:armines765@gmail.com?subject=${subject}&body=${body}`;
+
+      window.location.href = mailtoLink;
+      return false; // Prevents the form from actually submitting
+  } else {
+      alert('Please enter a valid email address.');
+      return false; // Prevents the form from actually submitting
+  }
+}

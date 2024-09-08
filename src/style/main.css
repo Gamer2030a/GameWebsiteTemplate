@@ -213,6 +213,77 @@ body {
 
 
 
+/* mailto */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.formbold-main-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  
+}
+
+.formbold-form-wrapper {
+  margin: 0 auto;
+  max-width: 550px;
+  width: 100%;
+
+
+}
+
+.formbold-form-input {
+  width: 100%;
+  padding: 13px 22px;
+  border-radius: 6px;
+  border: 1px solid #ffffff;
+  background: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 16px;
+  background: #ffffff00;
+  border-style: solid;
+  box-shadow: rgb(0, 0, 0) 0px 0px 0px 1px inset;
+  color: rgb(255, 255, 255);
+  outline: none;
+  resize: none;
+ 
+}
+.formbold-form-input:hover{
+    border-color: #ffffff;
+    box-shadow: 0px 3px 8px rgba(255, 255, 255, 0.5);
+}
+
+.formbold-form-input:focus {
+  border-color: #ffffff;
+  box-shadow: 0px 3px 8px rgb(255, 255, 255);
+}
+.formbold-email-subscription-form {
+  display: flex;
+  gap: 15px;
+}
+
+.formbold-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 13px 25px;
+  border: none;
+  font-weight: 500;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  cursor: none;
+}
+.formbold-btn:hover {
+  box-shadow: 0px 3px 8px rgba(255, 255, 255, 0.637);
+}
+
+.header_mailto{
+    color: white;
+    font-size: xx-large;
+}
+
 
 /*  media  */
 
