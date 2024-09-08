@@ -5,7 +5,12 @@
     font-style: normal;
 }
 
-html, body {
+*{
+    cursor: none;
+}
+
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -17,6 +22,10 @@ body {
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #000;
+    background-color: #171717;
+    overflow-y: hidden;
+    height: 120vh;
+    cursor: none;
 }
 
 .swiper {
@@ -35,28 +44,29 @@ body {
 
 .nested-swiper {
     width: 100%;
-    height: 100%; /* full height of the slide */
-  }
-  
-  .nested-swiper .swiper-slide {
+    height: 100%;
+    /* full height of the slide */
+}
+
+.nested-swiper .swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
     background: #fff;
     height: 100%;
-  }
-  
-  .nested-swiper .swiper-pagination {
+}
+
+.nested-swiper .swiper-pagination {
     bottom: 10px;
-  }
+}
 
 .Hero {
-    position: absolute; 
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden; 
+    overflow: hidden;
     z-index: 10;
 }
 
@@ -83,23 +93,24 @@ body {
     position: absolute;
     z-index: 3;
     left: 50%;
-    top: 50%;
+    margin-top: 26%;
     width: 250px;
     height: 64px;
     transform: translateX(-50%);
-    background: #00000000;
+    background: #0000;
     border-style: solid;
     box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px inset;
     color: white;
-    cursor: pointer;
+    cursor: none;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 24px;
+    transition: all 1s ease-in-out;
 }
 
 .herobtn:hover {
     background: #ececec;
     color: #171717;
-}   
+}
 
 /* Add styles for Slide 2 content */
 .slide-content {
@@ -109,8 +120,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #000; /* Make background black to highlight content */
-    overflow: hidden; /* Ensure no overflow of image */
+    background: #000;
+    /* Make background black to highlight content */
+    overflow: hidden;
+    /* Ensure no overflow of image */
 }
 
 .slide-content img {
@@ -119,7 +132,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cover the slide while maintaining aspect ratio */
+    object-fit: cover;
+    /* Cover the slide while maintaining aspect ratio */
     z-index: 1;
 }
 
@@ -131,7 +145,7 @@ body {
     color: white;
     padding: 15px 25px;
     font-size: 24px;
-    cursor: pointer;
+    cursor: none;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -139,7 +153,8 @@ body {
 }
 
 .play-btn::before {
-    content: '▶'; /* Play icon */
+    content: '▶';
+    /* Play icon */
     font-size: 30px;
 }
 
@@ -177,8 +192,195 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    cursor: pointer;
+   
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+/*  curs */
+
+.small {
+    width: 15px;
+    height: 15px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    z-index: 4;
+    position: sticky;
+}
+
+
+
+
+
+/*  media  */
+
+@media screen and (min-width: 2400px) {
+    .herobtn {
+        left: 50%;
+        margin-top: 26%;
+        
+    }
+}
+
+@media screen and (max-width: 2300px) {
+    .herobtn {
+        left: 50%;
+        margin-top: 28%;
+    }
+}
+
+@media screen and (max-width: 2200px) {
+    .herobtn {
+        left: 50%;
+        margin-top: 30%;
+    }
+}
+
+@media screen and (max-width: 2100px) {
+    .herobtn {
+        left: 50%;
+        margin-top: 32%;
+    }
+}
+
+@media screen and (max-width: 2000px) {
+    .herobtn {
+        left: 50%;
+        margin-top: 32%;
+    }
+}
+
+@media screen and (max-width: 1900px) {
+    .herobtn {
+        left: 50%;
+        margin-top: 34%;
+    }
+}
+
+@media screen and (max-width: 1800px) {
+    .herobtn {
+        left: 50%;
+        margin-top: 34%;
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    .herobtn {
+        left: 50%;
+        margin-top: 38%;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .herobtn {
+        left: 50%;
+        margin-top: 38%;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .herobtn {
+        left: 50%;
+        margin-top: 40%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .herobtn {
+        left: 50%;
+        margin-top: 35%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .herobtn {
+        left: 50%;
+        margin-top: 40%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .herobtn {
+        left: 50%;
+        margin-top: 45%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .herobtn {
+        left: 50%;
+        margin-top: 50%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .herobtn {
+        left: 50%;
+        margin-top: 52%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .herobtn {
+        left: 50%;
+        margin-top: 58%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .herobtn {
+        left: 50%;
+        margin-top: 60%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .herobtn {
+        left: 50%;
+        margin-top: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .herobtn {
+        left: 50%;
+        margin-top: 66%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .herobtn {
+        left: 50%;
+        margin-top: 68%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .herobtn {
+        left: 50%;
+        margin-top: 80%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .herobtn {
+        left: 50%;
+        margin-top: 72%;
+    }
+}
+
+@media screen and (max-width: 200px) {
+    .herobtn {
+        left: 50%;
+        margin-top: 74%;
+    }
+}
+
+@media screen and (max-width: 100px) {
+    .herobtn {
+        left: 50%;
+        margin-top: 76%;
+    }
 }
