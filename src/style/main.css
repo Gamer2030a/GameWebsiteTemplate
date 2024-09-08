@@ -1,0 +1,184 @@
+@font-face {
+    font-family: Bebas Neue;
+    src: url("../fonts/Bebas_Neue/BebasNeue-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+body {
+    background: #222222;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+}
+
+.swiper {
+    width: 100%;
+    height: 100vh;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #fff;
+    position: relative;
+}
+
+.nested-swiper {
+    width: 100%;
+    height: 100%; /* full height of the slide */
+  }
+  
+  .nested-swiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    height: 100%;
+  }
+  
+  .nested-swiper .swiper-pagination {
+    bottom: 10px;
+  }
+
+.Hero {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
+    z-index: 10;
+}
+
+.Hero video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.Hero img {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 35%;
+    transform: translateX(-50%);
+}
+
+.herobtn {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top: 50%;
+    width: 250px;
+    height: 64px;
+    transform: translateX(-50%);
+    background: #00000000;
+    border-style: solid;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px inset;
+    color: white;
+    cursor: pointer;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+}
+
+.herobtn:hover {
+    background: #ececec;
+    color: #171717;
+}   
+
+/* Add styles for Slide 2 content */
+.slide-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000; /* Make background black to highlight content */
+    overflow: hidden; /* Ensure no overflow of image */
+}
+
+.slide-content img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the slide while maintaining aspect ratio */
+    z-index: 1;
+}
+
+.play-btn {
+    position: absolute;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-btn::before {
+    content: '▶'; /* Play icon */
+    font-size: 30px;
+}
+
+.play-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+
+.video-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+}
+
+.video-modal iframe {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    border: none;
+    color: #000;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Game Title</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./src/style/main.css">
+</head>
+<body>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="Hero">
+          <img src="/src/images/TemplateHeroLogo.png" alt="Hero Logo">
+          <button class="herobtn" onclick="location.href='https://store.steampowered.com/app/2933620/Call_of_Duty_Black_Ops_6/';">
+            WISHLIST
+          </button>
+          <video id="background-video" autoplay loop muted poster="./src/images/TemplateHeroMoviePoster.png">
+            <source src="./src/images/TemplateHeroMovie.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="slide-content">
+          <img src="./src/images/slides/VideoCover.jpg" alt="Slide Image">
+          <button class="play-btn" onclick="openVideo('https://www.youtube.com/embed/oyZY_BiTmd8?autoplay=1');">
+          </button>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="nested-swiper">
+          <div class="swiper nestedSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="/src/images/slides/01.png" alt="slide image">
+              </div>
+              <div class="swiper-slide">
+                <img src="/src/images/slides/02.png" alt="slide image">
+              </div>
+              <div class="swiper-slide">
+                <img src="/src/images/slides/03.png" alt="slide image">
+              </div>
+              <div class="swiper-slide">
+                <img src="/src/images/slides/04.png" alt="slide image">
+              </div>
+              <div class="swiper-slide">
+                <img src="/src/images/slides/05.png" alt="slide image">
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="slide-content">
+            <img src="./src/images/slides/VideoCoverMP.jpg" alt="Slide Image">
+            <button class="play-btn" onclick="openVideo('https://www.youtube.com/embed/GYG_h-L-K2E?si=V1vusEKSThXEZVUR?autoplay=1');">
+            </button>
+          </div>
+      </div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">
+        <h>
+            Stay up to date
+        </h>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Video Modal -->
+  <div id="video-modal" class="video-modal">
+    <iframe id="video-frame" width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
+    <button class="close-btn" onclick="closeVideo();">X</button>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./src/app/main.js"></script>
+
+  <script>
+    // Initialize Main Swiper
+    var mainSwiper = new Swiper(".mySwiper", {
+      direction: "vertical",
+      slidesPerView: 1,
+      spaceBetween: 30,
+      mousewheel: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+
+    // Initialize Nested Swiper
+    var nestedSwiper = new Swiper(".nestedSwiper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: ".nested-swiper .swiper-pagination",
+        clickable: true,
+      },
+    });
+
+    function openVideo(url) {
+  const videoFrame = document.getElementById('video-frame');
+  videoFrame.src = url;
+  document.getElementById('video-modal').style.display = 'flex';
+    }
+
+
+    function closeVideo() {
+      document.getElementById('video-frame').src = '';
+      document.getElementById('video-modal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
