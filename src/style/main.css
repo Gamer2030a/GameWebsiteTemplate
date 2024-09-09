@@ -554,12 +554,9 @@ body {
 
 /* Ensure main content is hidden initially */
 #main-content {
-    display: none;
   }
   
   #loader {
-    display: block;
-    /* Additional loader styles */
   }
   
 

@@ -86,7 +86,7 @@ function sendEmail() {
   }
 }
 
-
+/*
 window.addEventListener('load', function() {
   const loader = document.getElementById('loader');
   const content = document.getElementById('main-content');
@@ -94,3 +94,4 @@ window.addEventListener('load', function() {
   loader.style.display = 'none';
   content.style.display = 'block'; // Show the main content
 });
+*/
