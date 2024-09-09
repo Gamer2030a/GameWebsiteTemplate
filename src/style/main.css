@@ -551,12 +551,12 @@ body {
 
 
 /*  Loader  */
-
-/* Ensure main content is hidden initially */
-#main-content {
-  }
-  
   #loader {
+    background-color: #ffff;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
   }
   
 

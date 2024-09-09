@@ -86,12 +86,18 @@ function sendEmail() {
   }
 }
 
-/*
-window.addEventListener('load', function() {
-  const loader = document.getElementById('loader');
-  const content = document.getElementById('main-content');
-  
-  loader.style.display = 'none';
-  content.style.display = 'block'; // Show the main content
-});
-*/
+
+document.onreadystatechange = function() {
+  if (document.readyState !== "complete") {
+      document.querySelector(
+        "body").style.visibility = "hidden";
+      document.querySelector(
+        "#preloader").style.visibility = "visible";
+        window.scrollTo(0, 0);
+  } else {
+      document.querySelector(
+        "#preloader").style.display = "none";
+      document.querySelector(
+        "body").style.visibility = "visible";
+  }
+};
