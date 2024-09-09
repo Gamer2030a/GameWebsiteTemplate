@@ -237,7 +237,7 @@ body {
     border: 5px solid #fff;
     border-radius: 50%;
     z-index: 4;
-    position:absolute;
+    position: sticky;
 }
 
 
